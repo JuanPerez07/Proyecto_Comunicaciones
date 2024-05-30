@@ -1,23 +1,23 @@
 #ifndef _CONFIG_H
 #define _CONFIG_H
 // bibliotecas necesarias
-#include <WiFi.h> // transmision mediante WiFi
+#include <WiFi.h> // WiFi transmission
 #include <PubSubClient.h> // MQTT protocol
-#include <WiFiClientSecure.h> // manejo de seguridad TLS
-#include <DHT.h> // Librería para manejo del sensor DHT11
-#include <Wire.h> // Librería para comunicación I2C 
-#include "Adafruit_Sensor.h" // Librería para manejar librerías de Adafruit para sensores
-#include "SSD1306Wire.h" // Librería para manejar la pantalla OLED
-// Configuración de username y password del WiFi
+#include <WiFiClientSecure.h> // TLS security
+#include <DHT.h> // sensor DHT11
+#include <Wire.h> // I2C comm
+#include "Adafruit_Sensor.h" // Adafruit unified sensor --> DHT.h
+#include "SSD1306Wire.h" // screen OLED 
+// username / password WiFi
 const char* ssid = "Cableworld_U329-2.4g";
 const char* password = "mhWQuzJ7";
-// Configuración de la dirección y puerto del broker
+// direction / port of the broker online
 const char* server_mqtt = "b882d072ed4747feaf5d6b61d5679193.s1.eu.hivemq.cloud";
 const int puerto_mqtt = 8883;
-// configuración de username y password del cliente
+// username / password of the client (broker regulated)
 const char* mqtt_username = "juan1";
 const char* mqtt_password = "Juan1234";
-// configuracion del root cetificate para usar TLS
+// root certificate to use TLS
 static const char* root_ca PROGMEM = R"EOF(
 -----BEGIN CERTIFICATE-----
 MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw
